@@ -1,0 +1,180 @@
+---
+interface Project {
+  title: string;
+  category: string;
+  badgeColor: string;
+  description: string;
+  features: string[];
+  tags: string[];
+  github: string;
+  videoSrc?: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "OfficeAssistant-AI",
+    category: "Multi-Agent Workflow",
+    badgeColor: "text-sky-400 bg-sky-950/60 border-sky-800/40",
+    description: "Autonomous workplace executive agent handling end-to-end email triage and composition. Structured around a multi-stage cognitive pattern: planner agents structure content, executor agents call mailbox functions, and a verification agent validates critical messages before dispatch.",
+    features: [
+      "Mailbox triage & natural language comprehension",
+      "Plan-and-Execute reasoning pattern",
+      "Verification guardrails & tool-use function calls"
+    ],
+    tags: ["Python", "Function Calling", "Multi-Agent", "Automation"],
+    github: "https://github.com/KirollosTadros/OfficeAssistant-AI",
+    videoSrc: "/office_assistant_demo.mp4"
+  },
+  {
+    title: "CodeProbe-AI",
+    category: "Active Retrieval RAG",
+    badgeColor: "text-indigo-400 bg-indigo-950/60 border-indigo-800/40",
+    description: "Repository comprehension engine using active vector retrieval and semantic embeddings. Automatically indexes project hierarchies, executes function calls to inspect syntax and files, and enables grounded natural language code Q&A.",
+    features: [
+      "Dynamic multi-vector code retrieval",
+      "Multi-file context expansion & AST inspection",
+      "Repository-grounded Q&A architecture"
+    ],
+    tags: ["Vector DB", "Text Embeddings", "Active RAG", "Codebase Parsing"],
+    github: "https://github.com/KirollosTadros/CodeProbe-AI",
+    // When your second demo is ready, just add the path:
+    // videoSrc: "/codeprobe_demo.mp4"
+  },
+  {
+    title: "DocuSense-AI",
+    category: "Document Intelligence",
+    badgeColor: "text-purple-400 bg-purple-950/60 border-purple-800/40",
+    description: "Specialized analytical pipeline for complex PDF documentation. Uses active retrieval, semantic chunking, and tool-use function calls to deliver citation-accurate answers across voluminous multi-page reports.",
+    features: [
+      "Dynamic chunking & document parsing",
+      "Vector similarity semantic search",
+      "Citation-grounded question answering"
+    ],
+    tags: ["RAG Pipeline", "Embeddings", "PDF Analysis", "Python"],
+    github: "https://github.com/KirollosTadros/DocuSense-AI"
+  },
+  {
+    title: "AI-Route-Planner",
+    category: "Full-Stack System",
+    badgeColor: "text-emerald-400 bg-emerald-950/60 border-emerald-800/40",
+    description: "Autonomous travel orchestration platform backed by live web discovery agents. Uncovers unlisted regional transit options and designs comprehensive multi-modal itineraries via an asynchronous backend.",
+    features: [
+      "Live web grounding for public transit",
+      "High-concurrency FastAPI architecture",
+      "PostgreSQL relational persistence layer"
+    ],
+    tags: ["FastAPI", "React", "PostgreSQL", "Web Search Agent"],
+    github: "https://github.com/KirollosTadros/AI-Route-Planner"
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirollos Tadros | AI Systems & Software Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-[#0b0f19] text-slate-400 antialiased font-sans selection:bg-indigo-500 selection:text-white">
+
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between font-mono">
+      <a href="#" class="text-slate-100 font-bold text-lg hover:text-sky-400 transition">kt.dev</a>
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="#projects" class="hover:text-slate-200 transition">Projects</a>
+        <a href="https://github.com/KirollosTadros" target="_blank" class="hover:text-slate-200 transition">
+          <i class="fa-brands fa-github text-lg"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="max-w-6xl mx-auto px-6 pt-24 pb-16">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-mono mb-6">
+        <span class="inline-block w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        <span>Available for AI Engineering Roles</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight mb-6">
+        Engineering <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Autonomous AI Agents</span> & Scalable Systems.
+      </h1>
+      <p class="text-lg text-slate-400 leading-relaxed mb-8">
+        Hi, I'm <span class="text-slate-100 font-semibold">Kirollos Tadros</span>. I specialize in agentic architectures, Plan-and-Execute workflows, Active RAG systems, and robust backend engineering.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects" class="px-6 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition flex items-center gap-2">
+          Explore Projects <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+        <a href="https://github.com/KirollosTadros" target="_blank" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-slate-500 text-slate-200 text-sm font-medium transition flex items-center gap-2">
+          <i class="fa-brands fa-github"></i> GitHub Profile
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="projects" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-12">
+      <h2 class="text-2xl font-bold text-slate-100">Featured AI Implementations</h2>
+      <span class="font-mono text-xs text-slate-500">04 Total Builds</span>
+    </div>
+
+    <div class="space-y-12">
+      {projects.map((proj) => (
+        <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:border-slate-700 transition">
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            {proj.videoSrc ? (
+              <div class="relative rounded-xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
+                <video autoplay loop muted playsinline class="w-full h-auto aspect-video object-cover">
+                  <source src={proj.videoSrc} type="video/mp4" />
+                </video>
+              </div>
+            ) : (
+              <div class="relative rounded-xl overflow-hidden bg-slate-950 border border-dashed border-slate-800 aspect-video flex flex-col items-center justify-center p-6 text-center group">
+                <div class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center mb-3 group-hover:border-sky-500 transition">
+                  <i class="fa-solid fa-layer-group text-slate-400 group-hover:text-sky-400 transition"></i>
+                </div>
+                <p class="text-sm font-medium text-slate-300">{proj.title} Demo</p>
+                <span class="font-mono text-xs text-slate-500 mt-1">Video demo slot ready</span>
+              </div>
+            )}
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class={`text-xs font-mono px-2.5 py-0.5 rounded border ${proj.badgeColor}`}>{proj.category}</span>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-100 mb-3">{proj.title}</h3>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">{proj.description}</p>
+              <ul class="space-y-2 text-xs text-slate-300 font-mono mb-6">
+                {proj.features.map((feat) => (
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-sky-400"></i> {feat}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs font-mono text-slate-400">
+                {proj.tags.map((tag) => (
+                  <span class="bg-slate-800/80 px-2 py-1 rounded">{tag}</span>
+                ))}
+              </div>
+              <a href={proj.github} target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-100 hover:text-sky-400 transition">
+                <i class="fa-brands fa-github"></i> Repository & Docs <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800/80 mt-20 py-10 font-mono text-xs text-slate-500 text-center">
+    &copy; 2026 Kirollos Tadros. Built with Astro & Tailwind CSS. Hosted on GitHub Pages.
+  </footer>
+
+</body>
+</html>
