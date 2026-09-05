@@ -24,8 +24,8 @@ const projects: Project[] = [
     ],
     tags: ["Python", "Function Calling", "Multi-Agent", "Automation"],
     github: "https://github.com/KirollosTadros/OfficeAssistant-AI",
-	title: "OfficeAssistant-AI",
-  	videoSrc: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/AI-Office-Assistant-Demo.mp4`  },
+    videoSrc: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/AI-Office-Assistant-Demo.mp4`
+  },
   {
     title: "CodeProbe-AI",
     category: "Active Retrieval RAG",
@@ -81,23 +81,27 @@ const projects: Project[] = [
 </head>
 <body class="bg-[#0b0f19] text-slate-400 antialiased font-sans selection:bg-indigo-500 selection:text-white">
 
-  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800">
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between font-mono">
-	<a href="/" class="flex items-center gap-3 group">
-	<img 
-      src="/favicon.svg" 
-      alt="Kirollos Henry" 
-      class="w-10 h-10 object-contain rounded-xl border border-zinc-800 bg-zinc-900/60 p-1 group-hover:border-sky-500/40 transition-colors" 
-    />      
-    <div class="flex items-center space-x-6 text-sm">
-      <a href="#projects" class="hover:text-slate-200 transition">Projects</a>
-      <a href="https://github.com/KirollosTadros" target="_blank" class="hover:text-slate-200 transition">
-        <i class="fa-brands fa-github text-lg"></i>
+      <a href="/" class="flex items-center gap-3 group">
+        <img 
+          src="/favicon.svg" 
+          alt="Kirollos Henry" 
+          class="w-10 h-10 object-contain rounded-xl border border-zinc-800 bg-zinc-900/60 p-1 group-hover:border-sky-500/40 transition-colors" 
+        />
+        <span class="font-semibold text-slate-100 text-sm tracking-tight group-hover:text-sky-400 transition-colors">
+          Kirollos Henry
+        </span>
       </a>
-    </div>
-  </div>
-</nav>
 
+      <div class="flex items-center space-x-6 text-sm">
+        <a href="#projects" class="hover:text-slate-200 transition">Projects</a>
+        <a href="https://github.com/KirollosTadros" target="_blank" class="hover:text-slate-200 transition">
+          <i class="fa-brands fa-github text-lg"></i>
+        </a>
+      </div>
+    </div>
+</nav>
   <header class="max-w-6xl mx-auto px-6 pt-24 pb-16">
     <div class="max-w-3xl">
       <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-mono mb-6">
