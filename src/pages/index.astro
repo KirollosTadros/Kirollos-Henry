@@ -9,9 +9,30 @@ interface Project {
   tags: string[];
   github: string;
   videoSrc?: string;
+  highlights?: { icon: string; label: string }[];
 }
 
 const projects: Project[] = [
+  {
+    title: "Research-AI",
+    category: "LangGraph Multi-Agent Research",
+    badgeColor: "text-amber-400 bg-amber-950/60 border-amber-800/40",
+    description: "Autonomous deep-research assistant built as a LangGraph state machine. A clarifier agent pauses the graph to ask the user follow-up questions when a query is vague, a planner splits it into sub-questions, parallel researcher subgraphs search the web with Tavily, and a writer agent compiles a source-cited markdown report.",
+    highlights: [
+      { icon: "fa-diagram-project", label: "LangGraph" },
+      { icon: "fa-user-check", label: "Human-in-the-Loop" },
+      { icon: "fa-users-gear", label: "Multi-Agent" }
+    ],
+    features: [
+      "HITL clarification via interrupt() & checkpointed resume",
+      "Parallel researcher fan-out with the Send API",
+      "Tool-calling subgraphs with capped web-search loops",
+      "Pydantic structured output & live streamed progress"
+    ],
+    tags: ["LangGraph", "Google Gemini", "Tavily", "Streamlit", "Docker"],
+    github: "https://github.com/KirollosTadros/Research-AI",
+    videoSrc: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/Research_AI_Demo.mp4`
+  },
   {
     title: "AskDB-AI",
     category: "Text-to-SQL Orchestration",
@@ -143,7 +164,7 @@ const projects: Project[] = [
   <main id="projects" class="max-w-6xl mx-auto px-6 py-16">
     <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-12">
       <h2 class="text-2xl font-bold text-slate-100">Featured AI Implementations</h2>
-      <span class="font-mono text-xs text-slate-500">05 Total Builds</span>
+      <span class="font-mono text-xs text-slate-500">06 Total Builds</span>
     </div>
 
     <div class="space-y-12">
@@ -174,6 +195,15 @@ const projects: Project[] = [
                 <span class={`text-xs font-mono px-2.5 py-0.5 rounded border ${proj.badgeColor}`}>{proj.category}</span>
               </div>
               <h3 class="text-2xl font-bold text-slate-100 mb-3">{proj.title}</h3>
+              {proj.highlights && (
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {proj.highlights.map((h) => (
+                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-md border border-sky-500/30 bg-sky-500/10 text-sky-300">
+                      <i class={`fa-solid ${h.icon} text-[10px]`}></i> {h.label}
+                    </span>
+                  ))}
+                </div>
+              )}
               <p class="text-sm text-slate-400 leading-relaxed mb-5">{proj.description}</p>
               <ul class="space-y-2 text-xs text-slate-300 font-mono mb-6">
                 {proj.features.map((feat) => (
